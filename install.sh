@@ -3,7 +3,7 @@
 # Aether-Claw Installer
 # Secure, swarm-based AI assistant with cryptographic skill signing
 #
-# Usage: curl -sSL https://raw.githubusercontent.com/RuneweaverStudios/aetherclaw/main/install.sh | bash -s -- [OPTIONS]
+# Usage: curl -sSL https://raw.githubusercontent.com/austindixson/aetherclaw/main/install.sh | bash -s -- [OPTIONS]
 #
 
 set -e
@@ -18,7 +18,7 @@ NC='\033[0m'
 
 # Defaults
 INSTALL_DIR="${HOME}/.aether-claw"
-REPO_URL="https://github.com/RuneweaverStudios/aetherclaw.git"
+REPO_URL="https://github.com/austindixson/aetherclaw.git"
 BRANCH="main"
 FORCE=false
 
@@ -233,14 +233,14 @@ if command -v git &> /dev/null; then
     git clone --depth 1 --branch "$BRANCH" "$REPO_URL" "$INSTALL_DIR" 2>/dev/null || {
         printf "${YELLOW}!${NC} Downloading archive...\n"
         TEMP_DIR=$(mktemp -d)
-        curl -sSL "https://github.com/RuneweaverStudios/aetherclaw/archive/refs/heads/$BRANCH.tar.gz" | tar -xzf - -C "$TEMP_DIR"
+        curl -sSL "https://github.com/austindixson/aetherclaw/archive/refs/heads/$BRANCH.tar.gz" | tar -xzf - -C "$TEMP_DIR"
         mv "$TEMP_DIR/aetherclaw-$BRANCH" "$INSTALL_DIR"
         rm -rf "$TEMP_DIR"
     }
 else
     printf "${YELLOW}!${NC} Downloading archive...\n"
     TEMP_DIR=$(mktemp -d)
-    curl -sSL "https://github.com/RuneweaverStudios/aetherclaw/archive/refs/heads/$BRANCH.tar.gz" | tar -xzf - -C "$TEMP_DIR"
+    curl -sSL "https://github.com/austindixson/aetherclaw/archive/refs/heads/$BRANCH.tar.gz" | tar -xzf - -C "$TEMP_DIR"
     mv "$TEMP_DIR/aetherclaw-$BRANCH" "$INSTALL_DIR"
     rm -rf "$TEMP_DIR"
 fi
