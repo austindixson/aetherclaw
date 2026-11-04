@@ -5,7 +5,7 @@ A **secure, swarm-based AI assistant** with persistent memory, proactive automat
 ## Quick Install
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/RuneweaverStudios/aetherclaw/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/austindixson/aetherclaw/main/install.sh | bash
 ```
 
 ## Onboarding
@@ -200,7 +200,7 @@ Edit `swarm_config.json` to customize:
 
 ```bash
 # Clone and install
-git clone https://github.com/RuneweaverStudios/aetherclaw.git
+git clone https://github.com/austindixson/aetherclaw.git
 cd aetherclaw
 pip install -r requirements.txt
 
